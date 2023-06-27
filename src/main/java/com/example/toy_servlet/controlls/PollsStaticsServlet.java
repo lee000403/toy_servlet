@@ -21,7 +21,7 @@ public class PollsStaticsServlet extends HttpServlet {
         try {
             PollsStaticsDao pollsStaticsDao = new PollsStaticsDao();
             ArrayList pollsStaticsList = new ArrayList<>();
-            int cnt_survey = pollsStaticsDao.cnt_Survey();
+            String cnt_survey = pollsStaticsDao.cnt_Survey();
             pollsStaticsList = pollsStaticsDao.sum_Answer();
 
             request.setAttribute("cnt_survey", cnt_survey);
