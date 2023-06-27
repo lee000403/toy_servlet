@@ -10,9 +10,10 @@
 </head>
 <body>
     <form action="/pollsStaticsServlet">
+        <% String cnt_survey = (String) request.getAttribute("cnt_survey"); %>
         <div class="container p-0">
             <div class="bg-info py-3 fs-3 text-light text-center"> 설문 통계 </div>
-            <div class="fs-4 py-3"> 총 설문자  : ?</div>
+            <div class="fs-4 py-3"> 총 설문자  : <%= cnt_survey %></div>
             <div class="fs-4 pb-3">각 문항 답항 개수 표시</div>
             <table class="table table-bordered table-hover">
                 <thead>
@@ -22,7 +23,6 @@
                     </tr>
                 </thead>
                 <% ArrayList pollsStaticsList = new ArrayList<>(); %>
-                <% int cnt_survey = request.getAttribute("cnt_survey");
                 <% pollsStaticsList = (ArrayList) request.getAttribute("pollsStaticsList"); %>
                 <tbody>
                     <% for (int i = 0; i < pollsStaticsList.size(); i++) { %>
@@ -31,15 +31,18 @@
                         %>
                     <tr>
                         <td>
-                            <%= pollsCnt.get("CHOICE"); %>
+                            <%= pollsCnt.get("CHOICE") %>
                         </td>
                         <td>
-                            <%= pollsCnt.get("CNT"); %>
+                            <%= pollsCnt.get("CNT") %>
                         </td>
                     </tr>
                 <% } %>
                 </tbody>
             </table>
+        </div>
+        <div class="container d-flex justify-content-end">
+            <button class="btn btn-primary" type="submit" formaction=""> 메인 화면 </button>
         </div>
     </form>
 </body>
