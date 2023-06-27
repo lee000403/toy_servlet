@@ -1,12 +1,12 @@
 -- 설문자 
 
 INSERT INTO RESPONDENTS
-(respondents, respondents_ID, PASSWORD)
+(respondents, respondents_ID, PASSWORD, PHONENUMBER )
 VALUES
-('홍길동', 'R-01', '0011'),
-('장길산', 'R-02', 'sads'),
-('신사임당', 'R-03', '5691'),
-('김철수', 'R-04', 'ds12');
+('홍길동', 'R-01', '0011', '010-1111-2222'),
+('장길산', 'R-02', 'sads', '010-2222-3333'),
+('신사임당', 'R-03', '5691', '010-3333-4444'),
+('김철수', 'R-04', 'ds12', '010-5555-6666');
 
 
 -- 설문 문항 

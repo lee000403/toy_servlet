@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -1,
-    "scrollLeft": -129,
+    "scrollTop": -120,
+    "scrollLeft": -78,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 61,
           "top": 156,
-          "zIndex": 9,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 61.2236328125
         },
@@ -159,7 +159,7 @@
           "active": false,
           "left": 569,
           "top": 50,
-          "zIndex": 2,
+          "zIndex": 1,
           "widthName": 127.68359375,
           "widthComment": 60
         },
@@ -221,7 +221,7 @@
           "active": false,
           "left": 1153,
           "top": 141,
-          "zIndex": 10,
+          "zIndex": 3,
           "widthName": 78.5654296875,
           "widthComment": 60
         },
@@ -300,13 +300,36 @@
               "widthDefault": 60
             },
             "id": "5f3d08d1-0f3f-4f48-86ab-f2b117089e66"
+          },
+          {
+            "name": "PHONENUMBER",
+            "comment": "설문자 전화번호",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 104.5654296875,
+              "widthComment": 96.61181640625,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "be13cbad-b21d-4a1e-9976-255a8ad94cf2"
           }
         ],
         "ui": {
           "active": false,
           "left": 407,
           "top": 600,
-          "zIndex": 21,
+          "zIndex": 10,
           "widthName": 100.9599609375,
           "widthComment": 60
         },
@@ -414,7 +437,7 @@
           "active": false,
           "left": 660,
           "top": 311,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 75.1884765625,
           "widthComment": 60
         },
@@ -491,7 +514,7 @@
             "c04c0c19-9abd-4cd7-9ba2-dca5c1817e0c"
           ],
           "x": 879.5205078125,
-          "y": 665.25,
+          "y": 675.5,
           "direction": "right"
         },
         "end": {
