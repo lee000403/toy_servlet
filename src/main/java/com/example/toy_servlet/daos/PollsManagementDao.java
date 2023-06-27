@@ -23,9 +23,11 @@ public class PollsManagementDao {
             // 컨텐츠 증가
             while (resultSet.next()) {
                 hashMap = new HashMap();
-                
-                hashMap.put("COMPANY_ID", resultSet.getString("COMPANY_ID"));
-                hashMap.put("COMPANY", resultSet.getString("COMPANY"));
+
+                hashMap.put("RESPONDENTS", resultSet.getString("RESPONDENTS"));
+                hashMap.put("RESPONDENTS_ID", resultSet.getString("RESPONDENTS_ID"));
+                hashMap.put("PASSWORD", resultSet.getString("PASSWORD"));
+                hashMap.put("PHONENUMBER", resultSet.getString("PHONENUMBER"));
                 arrayList.add(hashMap);
             }
         } catch (Exception e) {
