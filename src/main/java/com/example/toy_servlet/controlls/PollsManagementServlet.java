@@ -16,27 +16,23 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.example.toy_servlet.daos.PollsManagementDao;
 
-@WebServlet(urlPatterns = "/PollsManagementServlet")
+@WebServlet(urlPatterns = "/pollsManagementServlet")
 public class PollsManagementServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("PollsManagementServlet - doGet()");
 
         try {
-            String search = request.getParameter("search");
             PollsManagementDao pollsManagementDao = new PollsManagementDao();
-            ArrayList<HashMap<String, String>> pollsManagementList = pollsManagementDao.selectWithSearch(search);
+            ArrayList pollsManagementList = new ArrayList<>();
+            pollsManagementList = pollsManagementDao.selectAll();
+            int number = Integer.valueOf(request.getParameter("info"));
+            request.setAttribute("number", number);
+            request.setAttribute("pollsStaticsList", pollsManagementList);
 
-            // 검색 결과가 하나일 때만 선택
-            if (pollsManagementList.size() > 0) {
-                HashMap<String, String> result = pollsManagementList.get(0);
-                request.setAttribute("search", search);
-                request.setAttribute("pollsStaticsList", result);
-            }
-
+  
             response.setContentType("text/html;charset=UTF-8");
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/pollmanagement/information.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_management/information.jsp");
             requestDispatcher.forward(request, response);
 
         } catch (Exception e) {

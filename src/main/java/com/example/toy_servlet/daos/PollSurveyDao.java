@@ -33,7 +33,6 @@ public class PollSurveyDao {
 
                 pollList.add(answerRecord); //해쉬맵에 담은것들을 리스트에 담음
             }
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -16,44 +16,42 @@
 </head>
 
 <body>
-
-    <div class="container bg-info p-0 row mx-auto">
-        <div class="fs-4 py-3 d-flex justify-content-start col-6">
-            <button type="submit" formaction="" class=" btn btn-info text-light">회원관리</button>
-            <button type="submit" formaction="" class=" btn btn-info text-light">설문하기</button>
-            <button type="submit" formaction="" class=" btn btn-info text-light">설문통계</button>
-        </div>
-        <div class="fs-4 py-3 d-flex justify-content-end col-6">
-            <button type="submit" formaction="" class="btn btn-info text-light">로그인</button>
-        </div>
-    </div>
-    <br>
-
+    <%
+    ArrayList pollsManagementList = new ArrayList<>();
+    pollsManagementList = (ArrayList) request.getAttribute("pollsStaticsList");
+    int num = (int) request.getAttribute("number");
+    HashMap hashMap = new HashMap<>();
+    %>
     <!-- 위 게시판 부분 -->
     <div class="container">
         <h2 class="text-center">회원 상세정보</h2>
         <!--아이디 -->
         <form>
+            <% for (int i = 0; i < pollsManagementList.size(); i++) { %>
+                <% if (num == i + 1) { %>
+                    <% hashMap = new HashMap<>(); %>
+                    <% hashMap = (HashMap) pollsManagementList.get(i); %>
+                
             <div class="form-group row  mb-3">
-                <label for="id" class="col-sm-2 col-form-label">아이디</label>
+                <label for="id" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="id" value="" readonly>
+                    아이디 <div class="form-control"><%= hashMap.get("RESPONDENTS_ID") %></div>
                 </div>
             </div>
            <!-- 이름  -->
             <div class="form-group row  mb-3">
-                <label for="name" class="col-sm-2 col-form-label">성명</label>
+                <label for="name" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" value="" readonly>
+                    이름 <div class="form-control"><%= hashMap.get("RESPONDENTS") %></div>
                 </div>
             </div>
 
             <!-- 패스워드    -->
             
             <div class="form-group row  mb-3">
-                <label for="office" class="col-sm-2 col-form-label">비밀번호 </label>
+                <label for="office" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="password" value="" readonly>
+                    비밀번호 <div class="form-control"><%= hashMap.get("PASSWORD") %></div>
                 </div>
             </div>
           
@@ -61,20 +59,19 @@
             
             <!-- 휴대폰   -->
             <div class="form-group row  mb-3">
-                <label for="phone" class="col-sm-2 col-form-label">휴대폰</label>
+                <label for="phone" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="phone" value="" readonly>
+                    전화번호 <div class="form-control"><%= hashMap.get("PHONENUMBER") %></div>
                 </div>
             </div>
-           
+            <% } %>
+           <% } %>
                 
             
             <div class="form-group row  mb-3">
                 <div class="col-sm-10 offset-sm-2">
                     <div class="d-flex justify-content-end ">
-                        <button type="button" class="btn btn-primary">수정</button>
-                        <button type="button" class="btn btn-danger">삭제</button>
-                        <button type="button" class="btn btn-secondary">닫기</button>
+                        <button type="submit" class="btn btn-secondary" formaction="/poll_management/management.jsp">닫기</button>
                     </div>
                 </div>
             </div>

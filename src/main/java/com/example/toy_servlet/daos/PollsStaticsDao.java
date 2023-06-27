@@ -5,8 +5,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.springframework.boot.autoconfigure.amqp.RabbitProperties.Cache.Connection;
-
 import com.example.toy_servlet.commons.Commons;
 
 public class PollsStaticsDao {
@@ -25,7 +23,6 @@ public class PollsStaticsDao {
             while (resultSet.next()) {
                 cnt_survey = resultSet.getString("CNT");
             }
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -50,6 +47,7 @@ public class PollsStaticsDao {
                 hashMap.put("CNT", resultSet.getString("CNT"));
                 arrayList.add(hashMap);
             }
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -20,6 +20,7 @@ public class PollsLoginDao {
             while (resultSet.next()) {
                 hashMap.put(resultSet.getString("RESPONDENTS_ID"), resultSet.getString("PASSWORD"));
             }
+            resultSet.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
