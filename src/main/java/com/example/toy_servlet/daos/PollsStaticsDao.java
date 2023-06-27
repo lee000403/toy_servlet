@@ -18,7 +18,7 @@ public class PollsStaticsDao {
             String query = "SELECT COUNT(CNT) AS CNT\n" + //
                     "FROM (\n" + //
                     "SELECT COUNT(RESPONDENTS_ID) AS CNT\n" + //
-                    "FROM db_survey.statistics\n" + //
+                    "FROM statistics\n" + //
                     "GROUP BY RESPONDENTS_ID\n" + //
                     ") AS CNT_SURVEY";
             ResultSet resultSet = statement.executeQuery(query);
