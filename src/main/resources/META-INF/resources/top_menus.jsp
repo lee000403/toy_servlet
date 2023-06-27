@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <div class="container bg-info p-0 row mx-auto">
     <div class="fs-4 py-3 d-flex justify-content-start col-6">
         <button type="submit" formaction="" class=" btn btn-info text-light">회원관리</button>

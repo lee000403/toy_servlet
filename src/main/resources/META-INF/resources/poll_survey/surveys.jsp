@@ -1,5 +1,5 @@
 <%@ page import="java.util.HashMap, java.util.ArrayList" %>
-    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
         <!DOCTYPE html>
         <html lang="en">
 
@@ -14,7 +14,7 @@
             <!-- top menu -->
             <%@ include file="/top_menus.jsp" %>
                 <br>
-                <form method="get" action="">
+                <form method="get" action="/surveyservlet">
 
                     <div class=" container mx-auto">
                         <div>
@@ -57,7 +57,7 @@
                     <div class="container bg-white fs-6 py-6 row mx-auto my-3">
                         <div class="text-center d-flex justify-content-center py-2">
                             <button type="submit" formaction="" class=" btn btn-white mx-2 btn-outline-dark">닫기</button>
-                            <button type="submit" formaction="" class="btn btn-white btn-outline-dark bg-info">설문
+                            <button type="submit" formaction="/pollsStaticsServlet" class="btn btn-white btn-outline-dark bg-info">설문
                                 제출</button>
                         </div>
                     </div>

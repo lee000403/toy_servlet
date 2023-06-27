@@ -1,4 +1,4 @@
-package com.example.toy_servlet;
+package com.example.toy_servlet.controlls;
 
 import java.io.IOException;
 import java.sql.ResultSet;
