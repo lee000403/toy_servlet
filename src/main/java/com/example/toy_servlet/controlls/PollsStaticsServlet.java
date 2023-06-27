@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.example.toy_servlet.daos.PollsStaticsDao;
 
-@WebServlet(urlPatterns = "/PollsStaticsServlet")
+@WebServlet(urlPatterns = "/pollsStaticsServlet")
 public class PollsStaticsServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
