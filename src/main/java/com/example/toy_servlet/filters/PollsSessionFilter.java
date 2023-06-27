@@ -13,18 +13,15 @@ import javax.servlet.http.HttpSession;
 
 import com.example.toy_servlet.daos.PollsLoginDao;
 
-@WebServlet(urlPatterns = "/PollsSessionFilter")
+@WebServlet(urlPatterns = "/pollsSessionFilter")
 public class PollsSessionFilter extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_statistic/login.jsp");
-            requestDispatcher.forward(request, response);
             PollsLoginDao pollsLoginDao = new PollsLoginDao();
             HashMap hashMap = pollsLoginDao.hash_id();
 
-            String RESPONDENTS = request.getParameter("RESPONDENTS");
             String RESPONDENTS_ID = request.getParameter("RESPONDENTS_ID");
             String PASSWORD = request.getParameter("PASSWORD");
 
@@ -32,15 +29,16 @@ public class PollsSessionFilter extends HttpServlet {
             String RESPONDENTS_ID_Session = (String) httpSession.getAttribute("RESPONDENTS_ID");
 
             if (httpSession != null && RESPONDENTS_ID_Session != null) {
-
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_statistic/login.jsp");
+                requestDispatcher.forward(request, response);
             } else {
-                if (hashMap.get(RESPONDENTS_ID).equals(PASSWORD)) {
+                if (hashMap.containsKey(RESPONDENTS_ID) && hashMap.get(RESPONDENTS_ID).equals(PASSWORD)) {
                     httpSession = request.getSession();
-                    httpSession.setAttribute("RESPONDENTS_ID", RESPONDENTS_ID);
-                    httpSession.setAttribute("PASSWORD", PASSWORD);
-
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("polls_LoginServlet");
+                    requestDispatcher.forward(request, response);
                 } else {
-
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_statistic/login.jsp");
+                    requestDispatcher.forward(request, response);
                 }
             }
         } catch (Exception e) {
