@@ -36,7 +36,7 @@ public class SurveyServlet extends HttpServlet {
             request.setAttribute("optionInforList", optionInforList);
 
             // getWriter 전에 charset 하기 (한글 깨지지 않게끔)
-               response.setContentType("text/html;charset=UTF-8");
+            response.setContentType("text/html;charset=UTF-8");
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
