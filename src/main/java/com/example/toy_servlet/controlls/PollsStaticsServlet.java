@@ -2,7 +2,9 @@ package com.example.toy_servlet.controlls;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,14 +14,29 @@ import javax.servlet.http.HttpServletResponse;
 import com.example.toy_servlet.daos.PollsStaticsDao;
 
 @WebServlet(urlPatterns = "/pollsStaticsServlet")
-public class PollsStaticsServlet extends HttpServlet{
+public class PollsStaticsServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         try {
             PollsStaticsDao pollsStaticsDao = new PollsStaticsDao();
             ArrayList pollsStaticsList = new ArrayList<>();
             int cnt_survey = pollsStaticsDao.cnt_Survey();
             pollsStaticsList = pollsStaticsDao.sum_Answer();
+
+            request.setAttribute("cnt_survey", cnt_survey);
+            request.setAttribute("pollsStaticsList", pollsStaticsList);
+
+            for (int i = 0; i < pollsStaticsList.size(); i++) {
+                HashMap pollsCnt = new HashMap<>();
+                pollsCnt = (HashMap) pollsStaticsList.get(i);
+                pollsCnt.get("CHOICE");
+                pollsCnt.get("CNT");
+            }
+            response.setContentType("text/html;charset=UTF-8");
+
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_statistic/statistic.jsp");
+            requestDispatcher.forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
