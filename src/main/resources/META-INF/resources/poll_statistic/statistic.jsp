@@ -42,7 +42,7 @@
             </table>
         </div>
         <div class="container d-flex justify-content-end">
-            <button class="btn btn-primary" type="submit" formaction="/polls.jsp"> 메인 화면 </button>
+            <button class="btn btn-primary" type="submit" formaction="/pollsMain"> 메인 화면 </button>
         </div>
     </form>
 </body>
