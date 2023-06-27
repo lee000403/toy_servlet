@@ -281,7 +281,7 @@
           {
             "name": "PASSWORD",
             "comment": "설문자 비밀번호",
-            "dataType": "VARCHAR",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -296,7 +296,7 @@
               "pfk": false,
               "widthName": 76.876953125,
               "widthComment": 96.61181640625,
-              "widthDataType": 64.6005859375,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "5f3d08d1-0f3f-4f48-86ab-f2b117089e66"
@@ -306,7 +306,7 @@
           "active": false,
           "left": 407,
           "top": 600,
-          "zIndex": 7,
+          "zIndex": 21,
           "widthName": 100.9599609375,
           "widthComment": 60
         },
