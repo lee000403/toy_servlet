@@ -8,7 +8,7 @@
     <title> 설문 조사 </title>
 </head>
 <body>
-    <form action="/pollsMain">
+    <form action="">
         <%@ include file="top_menus.jsp" %>
     </form>
 </body>

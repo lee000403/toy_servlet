@@ -6,6 +6,6 @@
         <button type="submit" formaction="/pollsStaticsServlet" class=" btn btn-info text-light">설문통계</button>
     </div>
     <div class="fs-4 py-3 d-flex justify-content-end col-6">
-        <button type="submit" formaction="/PollsSessionFilter" class="btn btn-info text-light">로그인</button>
+        <button type="submit" formaction="/poll_statistic/login.jsp" class="btn btn-info text-light">로그인</button>
     </div>
 </div>
