@@ -25,10 +25,11 @@ public class SurveyServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             String answer = request.getParameter("answer"); // 답항을 받는 것
+            String resultSet = request.getParameter("resultSet");
 
             PollSurveyDao pollSurveyDao = new PollSurveyDao();
             ArrayList optionInforList = new ArrayList<>();
-            optionInforList = pollSurveyDao.answersuvey(answer, null);
+            optionInforList = pollSurveyDao.answersuvey(answer,null);
 
             //JSP로 넘겨줌
             request.setAttribute("answer", answer);
