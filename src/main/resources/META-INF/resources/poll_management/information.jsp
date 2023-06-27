@@ -32,6 +32,7 @@
     <!-- 위 게시판 부분 -->
     <div class="container">
         <h2 class="text-center">회원 상세정보</h2>
+        <!--아이디 -->
         <form>
             <div class="form-group row  mb-3">
                 <label for="id" class="col-sm-2 col-form-label">아이디</label>
@@ -39,25 +40,33 @@
                     <input type="text" class="form-control" id="id" value="" readonly>
                 </div>
             </div>
-            <div class="form-group row  mb-3">
-                <label for="phone" class="col-sm-2 col-form-label">휴대폰</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="phone" value="" readonly>
-                </div>
-            </div>
+           <!-- 이름  -->
             <div class="form-group row  mb-3">
                 <label for="name" class="col-sm-2 col-form-label">성명</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="name" value="" readonly>
                 </div>
             </div>
+
+            <!-- 패스워드    -->
+            
             <div class="form-group row  mb-3">
-                <label for="office" class="col-sm-2 col-form-label">주소 </label>
+                <label for="office" class="col-sm-2 col-form-label">비밀번호 </label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="office" value="" readonly>
+                    <input type="text" class="form-control" id="password" value="" readonly>
                 </div>
             </div>
           
+            
+            
+            <!-- 휴대폰   -->
+            <div class="form-group row  mb-3">
+                <label for="phone" class="col-sm-2 col-form-label">휴대폰</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="phone" value="" readonly>
+                </div>
+            </div>
+           
                 
             
             <div class="form-group row  mb-3">
@@ -71,6 +80,7 @@
             </div>
         </form>
     </div>
+
 
     <!-- 부트스트랩 및 필요한 JavaScript 파일 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

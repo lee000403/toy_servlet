@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -120,
-    "scrollLeft": -78,
-    "zoomLevel": 0.9,
+    "scrollTop": -169,
+    "scrollLeft": -124,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -329,7 +329,7 @@
           "active": false,
           "left": 407,
           "top": 600,
-          "zIndex": 10,
+          "zIndex": 15,
           "widthName": 100.9599609375,
           "widthComment": 60
         },
@@ -435,9 +435,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 660,
-          "top": 311,
-          "zIndex": 5,
+          "left": 643.75,
+          "top": 297.25,
+          "zIndex": 16,
           "widthName": 75.1884765625,
           "widthComment": 60
         },
@@ -513,18 +513,18 @@
           "columnIds": [
             "c04c0c19-9abd-4cd7-9ba2-dca5c1817e0c"
           ],
-          "x": 879.5205078125,
-          "y": 675.5,
-          "direction": "right"
+          "x": 643.26025390625,
+          "y": 600,
+          "direction": "top"
         },
         "end": {
           "tableId": "8759f5a2-1d04-4c5a-8113-9f172fc83f58",
           "columnIds": [
             "6510f268-7757-4314-92e1-e46d231a71b1"
           ],
-          "x": 891.566162109375,
-          "y": 462,
-          "direction": "bottom"
+          "x": 643.75,
+          "y": 410.5,
+          "direction": "left"
         },
         "constraintName": "",
         "visible": true,
@@ -548,8 +548,8 @@
           "columnIds": [
             "3bebd5e0-1ea4-4c97-905b-94c9fa28b9b0"
           ],
-          "x": 1123.13232421875,
-          "y": 386.5,
+          "x": 1106.88232421875,
+          "y": 372.75,
           "direction": "right"
         },
         "constraintName": "",
@@ -574,8 +574,8 @@
           "columnIds": [
             "4aa7b2e4-9155-449d-9aac-1f814257b992"
           ],
-          "x": 660,
-          "y": 386.5,
+          "x": 643.75,
+          "y": 335,
           "direction": "left"
         },
         "constraintName": "",

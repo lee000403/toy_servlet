@@ -21,19 +21,18 @@ public class PollSurveyDao {
                     "values\n" + //
                     "('"+resultSet.getString("STATISTICS_ID")+"', '"+resultSet.getString("RESPONDENTS_ID")+"', '"+resultSet.getString("QUESTIONS_ID") +"', '"+resultSet.getString("CHOICE_ID")+"')";
             count = statement.executeUpdate(query);
-            //count = statement.executeUpdate(query); 
 
 
-            // //HashMap answerRecord = new HashMap<>();
-            // while(resultSet.next()){ //해쉬맵에 담는다.
-            //     answerRecord = new HashMap<>(); // 초기화
-            //     answerRecord.put("STATISTICS_ID", resultSet.getString("STATISTICS_ID")); 
-            //     answerRecord.put("RESPONDENTS_ID", resultSet.getString("RESPONDENTS_ID"));
-            //     answerRecord.put("QUESTIONS_ID", resultSet.getString("QUESTIONS_ID"));
-            //     answerRecord.put("CHOICE_ID", resultSet.getString("CHOICE_ID"));
+            //HashMap answerRecord = new HashMap<>();
+            while(resultSet.next()){ //해쉬맵에 담는다.
+                answerRecord = new HashMap<>(); // 초기화
+                answerRecord.put("STATISTICS_ID", resultSet.getString("STATISTICS_ID")); 
+                answerRecord.put("RESPONDENTS_ID", resultSet.getString("RESPONDENTS_ID"));
+                answerRecord.put("QUESTIONS_ID", resultSet.getString("QUESTIONS_ID"));
+                answerRecord.put("CHOICE_ID", resultSet.getString("CHOICE_ID"));
 
-            //     pollList.add(answerRecord); //해쉬맵에 담은것들을 리스트에 담음
-            // }
+                pollList.add(answerRecord); //해쉬맵에 담은것들을 리스트에 담음
+            }
 
         } catch (Exception e) {
             System.out.println(e.getMessage());

@@ -33,63 +33,43 @@
                     <th>번호 </th>
                     <th>아이디 </th>
                     <th>성명</th>
-                    <th>휴대폰 </th>
-                    <th>가입일 </th>
-                    <th>접속일 </th>
-                    <th>개인정보 </th>
-                    <th>작업</th>
+                    <th>세부정보</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>abcd1234@gmail.com</td>
-                    <td>김철수</td>
-                    <td>010-1111-2222</td>
-                    <td>2017.03.01</td>
-                    <td></td>
-                    <td>비공개</td>
+                    <tr>
+                        <td>1</td>
+                        <td>R-04</td>
+                        <td>김철수</td>                    
                     <td>
-                        <button class="btn btn-primary">버튼</button>
-                       
+                       <button formaction="/poll_management/information.jsp" class="btn btn-primary">버튼</button>
                     </td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>efgh1234@gmail.com</td>
+                    <td>R-03</td>
                     <td>신사임당</td>
-                    <td>010-2222-3333</td>
-                    <td>2018.11.10</td>
-                    <td></td>
-                    <td>비공개</td>
                     <td>
-                        <button class="btn btn-primary">버튼</button>
+                        <button formaction="/poll_management/information.jsp" class="btn btn-primary">버튼</button>
                        
                     </td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>hijk1234@gmail.com</td>
+                    <td>R-02</td>
                     <td>장길산</td>
-                    <td>010-3333-4444</td>
-                    <td>2019.02.01</td>
-                    <td></td>
-                    <td>비공개</td>
                     <td>
-                        <button class="btn btn-primary">버튼</button>
+                        <button formaction="/poll_management/information.jsp" class="btn btn-primary">버튼</button>
                        
                     </td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>lmno1234@gmail.com</td>
+                    <td>R-01</td>
                     <td>홍길동</td>
-                    <td>010-5555-6666</td>
-                    <td>2020.03.01</td>
-                    <td></td>
-                    <td>비공개</td>
                     <td>
-                        <button class="btn btn-primary">버튼</button>
+                        <button formaction="/poll_management/information.jsp" class="btn btn-primary">버튼</button>
                        
                     </td>
                 </tr>
