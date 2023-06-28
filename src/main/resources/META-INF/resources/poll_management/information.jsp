@@ -16,8 +16,9 @@
 </head>
 
 <body>
+    <!--회원관리 정보 리스트 컨테이너 역할 -->
     <%
-    ArrayList pollsManagementList = new ArrayList<>();
+    ArrayList pollsManagementList = new ArrayList<>();  
     pollsManagementList = (ArrayList) request.getAttribute("pollsStaticsList");
     int num = (int) request.getAttribute("number");
     HashMap hashMap = new HashMap<>();
@@ -27,6 +28,8 @@
         <h2 class="text-center">회원 상세정보</h2>
         <!--아이디 -->
         <form>
+
+            <!--반복문 활용 후 각 회원 정보 하나씩 출력 -->
             <% for (int i = 0; i < pollsManagementList.size(); i++) { %>
                 <% if (num == i + 1) { %>
                     <% hashMap = new HashMap<>(); %>

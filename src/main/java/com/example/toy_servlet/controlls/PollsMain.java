@@ -19,6 +19,7 @@ public class PollsMain extends HttpServlet {
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls.jsp");
             requestDispatcher.forward(request, response);
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

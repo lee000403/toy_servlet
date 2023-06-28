@@ -13,70 +13,49 @@
     <%@ include file="/top_menus.jsp" %>
     <br>
     <% 
-    String name = (String)request.getAttribute("name");
+    String answer = (String)request.getAttribute("answer");
     %>
+    <% ArrayList pollList = new ArrayList<>(); %>
+    <% pollList = (ArrayList) request.getAttribute("pollList"); %>
+    
     <form method="get" action="/surveyservlet"> 
     
-    <div class=" container mx-auto">
+    <div class="container mx-auto">
         <div>
         <p> 1. 이 수업에 대해 전반적으로 만족하십니까?</p>
-        <label><input type="radio" name="1번 문항" value="1"> 매우 그렇다 </label> <br>
-        <label><input type="radio" name="1번 문항" value="2"> 그렇다 </label><br>
-        <label><input type="radio" name="1번 문항" value="3"> 보통이다 </label><br>
-        <label><input type="radio" name="1번 문항" value="4"> 그렇지 않다 </label><br>
-        <label><input type="radio" name="1번 문항" value="5"> 전혀 그렇지 않다 </label>
+        <label><input type="radio" name="Q-01" value="C-01"> 매우 그렇다 </label> <br>
+        <label><input type="radio" name="Q-01" value="C-02"> 그렇다 </label><br>
+        <label><input type="radio" name="Q-01" value="C-03"> 보통이다 </label><br>
+        <label><input type="radio" name="Q-01" value="C-04"> 그렇지 않다 </label><br>
         </div>
         <br>
         <div>
             <p> 2. 강의계획서에 수업내용 및 목표와 평가방법이 자세하게 안내되었습니까?</p>
-            <label><input type="radio" name="2번 문항" value="1"> 매우 그렇다 </label> <br>
-            <label><input type="radio" name="2번 문항" value="2"> 그렇다 </label><br>
-            <label><input type="radio" name="2번 문항" value="3"> 보통이다 </label><br>
-            <label><input type="radio" name="2번 문항" value="4"> 그렇지 않다 </label><br>
-            <label><input type="radio" name="2번 문항" value="5"> 전혀 그렇지 않다 </label>
+            <label><input type="radio" name="Q-02" value="C-01"> 매우 그렇다 </label> <br>
+            <label><input type="radio" name="Q-02" value="C-02"> 그렇다 </label><br>
+            <label><input type="radio" name="Q-02" value="C-03"> 보통이다 </label><br>
+            <label><input type="radio" name="Q-02" value="C-04"> 그렇지 않다 </label><br>
         </div>
         <br>
         <div>
             <p> 3. 개강 초 수업에 대한 안내 혹은 오리엔테이션에 충실히 이루어졌습니까?</p>
-            <label><input type="radio" name="3번 문항" value="1"> 매우 그렇다 </label> <br>
-            <label><input type="radio" name="3번 문항" value="2"> 그렇다 </label><br>
-            <label><input type="radio" name="3번 문항" value="3"> 보통이다 </label><br>
-            <label><input type="radio" name="3번 문항" value="4"> 그렇지 않다 </label><br>
-            <label><input type="radio" name="3번 문항" value="5"> 전혀 그렇지 않다 </label>
+            <label><input type="radio" name="Q-03" value="C-01"> 매우 그렇다 </label> <br>
+            <label><input type="radio" name="Q-03" value="C-02"> 그렇다 </label><br>
+            <label><input type="radio" name="Q-03" value="C-03"> 보통이다 </label><br>
+            <label><input type="radio" name="Q-03" value="C-04"> 그렇지 않다 </label><br>
         </div>
         <br>
         <div>
             <p> 4. 대학원 학습 환경과 자료 제공은 만족스러웠나요?</p>
-            <label><input type="radio" name="4번 문항" value="1"> 매우 그렇다 </label> <br>
-            <label><input type="radio" name="4번 문항" value="2"> 그렇다 </label><br>
-            <label><input type="radio" name="4번 문항" value="3"> 보통이다 </label><br>
-            <label><input type="radio" name="4번 문항" value="4"> 그렇지 않다 </label><br>
-            <label><input type="radio" name="4번 문항" value="5"> 전혀 그렇지 않다 </label>
+            <label><input type="radio" name="Q-04" value="C-01"> 매우 그렇다 </label> <br>
+            <label><input type="radio" name="Q-04" value="C-02"> 그렇다 </label><br>
+            <label><input type="radio" name="Q-04" value="C-03"> 보통이다 </label><br>
+            <label><input type="radio" name="Q-04" value="C-04"> 그렇지 않다 </label><br>
         </div>
     </div>
-    <% ArrayList pollList = (ArrayList) request.getAttribute("pollList"); %>
-    <!--<% ArrayList pollList = new ArrayList<>(); %>-->
-            <% pollList = (ArrayList) request.getAttribute("pollList"); %>
-            <tbody>
-                <% for(int i=0; i< pollList.size(); i=i+1) { %>
-                    <%
-                    HashMap answerRecord = new HashMap<>();
-                    answerRecord = (HashMap) pollList.get(i);
-                    %>
-                <form>
-                    <input type="hidden" name="RESPONDENTS_ID" value="<%= answerRecord.get("QUESTIONS_ID") %>">
-                    <input type="hidden" name="RESPONDENTS_ID" value="<%= answerRecord.get("CHOICE_ID") %>">
-                <tr>
-                    <td>
-                        <button type="submit" formaction="/surveyservlet">
-                            <%= answerRecord.get("QUESTIONS_ID") %>
-                            <%= answerRecord.get("CHOICE_ID") %>
-                        </button>
-                    </td>
-                </tr>
-                </form>
-            <% } %>
-            </tbody>
+        
+    
+</tbody>
 
     <div class="container bg-white fs-6 py-6 row mx-auto my-3">
         <div class="text-center d-flex justify-content-center py-2">
@@ -84,6 +63,7 @@
             <button type="submit" formaction="/pollsMain" class="btn btn-white btn-outline-dark bg-info">설문 제출</button>
         </div>
     </div>
+
     </form>
 </body>
 </html>
