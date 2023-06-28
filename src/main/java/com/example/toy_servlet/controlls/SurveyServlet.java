@@ -28,16 +28,19 @@ public class SurveyServlet extends HttpServlet {
             String resultSet = request.getParameter("resultSet");
 
             PollSurveyDao pollSurveyDao = new PollSurveyDao();
-            ArrayList optionInforList = new ArrayList<>();
-            optionInforList = pollSurveyDao.answersuvey(answer,null);
+            ArrayList pollList = new ArrayList<>();
+            pollList = pollSurveyDao.answersuvey(answer);
 
-            //JSP로 넘겨줌
+            // JSP로 넘겨줌
             request.setAttribute("answer", answer);
-            request.setAttribute("optionInforList", optionInforList);
+            request.setAttribute("pollList", pollList);
 
             // getWriter 전에 charset 하기 (한글 깨지지 않게끔)
             response.setContentType("text/html;charset=UTF-8");
 
+            // jsp 파일 호출
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_survey/surveycopy.jsp");
+            requestDispatcher.forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
