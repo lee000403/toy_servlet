@@ -41,7 +41,7 @@ public class SessionFilter extends HttpServlet {
                     requestDispatcher.forward(request, response);
 
                 } else {
-                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_statistic/login.jsp");
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls.jsp");
                     requestDispatcher.forward(request, response);
                 }
             }
