@@ -11,7 +11,6 @@
     <form action="">
         <%@ include file="top_menus.jsp" %>
         <div class="container m-auto p-5">
-            <img src="./pollimage.png" alt="" width="100%" height="100%">
             <div class="h-3 text-center">설문 조사 홈페이지</div>
         </div>
     </form>
