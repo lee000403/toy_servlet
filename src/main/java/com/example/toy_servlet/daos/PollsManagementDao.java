@@ -27,6 +27,7 @@ public class PollsManagementDao {
                 hashMap.put("PASSWORD", resultSet.getString("PASSWORD"));
                 hashMap.put("PHONENUMBER", resultSet.getString("PHONENUMBER"));
                 arrayList.add(hashMap);
+                
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
