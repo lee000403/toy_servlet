@@ -27,12 +27,12 @@ public class PollsStaticsServlet extends HttpServlet {
             request.setAttribute("cnt_survey", cnt_survey);
             request.setAttribute("pollsStaticsList", pollsStaticsList);
 
-            for (int i = 0; i < pollsStaticsList.size(); i++) {
-                HashMap pollsCnt = new HashMap<>();
-                pollsCnt = (HashMap) pollsStaticsList.get(i);
-                pollsCnt.get("CHOICE");
-                pollsCnt.get("CNT");
-            }
+            String RESPONDENTS_ID = request.getParameter("RESPONDENTS_ID");
+            String PASSWORD = request.getParameter("PASSWORD");
+
+            request.setAttribute("RESPONDENTS_ID", RESPONDENTS_ID);
+            request.setAttribute("PASSWORD", PASSWORD);
+
             response.setContentType("text/html;charset=UTF-8");
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_statistic/statistic.jsp");
