@@ -59,8 +59,8 @@
 
     <div class="container bg-white fs-6 py-6 row mx-auto my-3">
         <div class="text-center d-flex justify-content-center py-2">
-            <button type="submit" formaction="/pollsMain" class=" btn btn-white mx-2 btn-outline-dark">닫기</button>
-            <button type="submit" formaction="/pollsMain" class="btn btn-white btn-outline-dark bg-info">설문 제출</button>
+            <button type="submit" formaction="/poll_statistic/polls_login_main.jsp" class=" btn btn-white mx-2 btn-outline-dark">닫기</button>
+            <button type="submit" formaction="/pollsStaticsServlet" class="btn btn-white btn-outline-dark bg-info">설문 제출</button>
         </div>
     </div>
 
