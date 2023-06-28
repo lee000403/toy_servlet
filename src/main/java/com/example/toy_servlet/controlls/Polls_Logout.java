@@ -29,7 +29,7 @@ public class Polls_Logout extends HttpServlet {
                     response.addCookie(cookie);
                 }
             }
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll_statistic/polls_login_main.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls.jsp");
             requestDispatcher.forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());
