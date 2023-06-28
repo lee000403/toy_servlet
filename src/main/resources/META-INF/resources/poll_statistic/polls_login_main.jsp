@@ -22,8 +22,12 @@
                     </button>
                 </div>
                 <div class="fs-4 py-3 d-flex justify-content-end col-6">
-                    <button type="submit" formaction="/pollsMain" class="btn btn-info text-light">(로그아웃, <%= session.getAttribute("RESPONDENTS_ID")%>)</button>
+                    <button type="submit" formaction="/polls_Logout" class="btn btn-info text-light">(로그아웃, <%= session.getAttribute("RESPONDENTS_ID")%>)</button>
                 </div>
+            </div>
+            <div class="container m-auto p-5">
+                <img src="../pollimage.png" alt="이미지 로딩" width="100%" height="100%" class="m-auto">
+                <div class="h-3 text-center">설문 조사 홈페이지</div>
             </div>
         </form>
     </body>

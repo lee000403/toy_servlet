@@ -10,6 +10,9 @@
 <body>
     <form action="">
         <%@ include file="top_menus.jsp" %>
+        <div class="container m-auto p-5">
+            <div class="h-3 text-center">설문 조사 홈페이지</div>
+        </div>
     </form>
 </body>
 </html>
